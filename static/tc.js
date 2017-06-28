@@ -70,7 +70,7 @@
 
 			// custom styling on stop markers
 			var markerStyle = {
-			    radius: 5,
+			    radius: 4,
 			    fillColor: "#57068c",
 			    fillOpacity: 0.6
 			};
@@ -109,7 +109,7 @@
 				tc.selection.direction = newDirection;
 				tc.refreshMap();
 			}
-			// refresh data table for all seleciton changes
+			// refresh data table for all selection changes
 			tc.refreshTable();
 			
 		},
