@@ -81,14 +81,22 @@
 			    "opacity": 1
 			};
 
+			function buildPopup(feature, layer) {
+			    if (feature.geometry.type == 'Point') {
+			        layer.bindPopup(feature.properties.n);
+			    }
+			}
+
 			// create a geojson map layer, passing a function to generate custom markers from geo points
 			// don't add any geo data to the layer at this stage (data added in refresh function)
 			tc.mapLayer = L.geoJSON(false, {
     			pointToLayer: function (feature, latlng) {
         			return L.circleMarker(latlng, markerStyle);
     			},
+    			onEachFeature: buildPopup,
     			style: lineStyle
     		}).addTo(tc.mapObject);
+
 		},
 
 		refreshMap: function() {
