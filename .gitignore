@@ -4,7 +4,7 @@
 venv
 
 # exclude data directory, with exception of json profiles
-#data
+data
 #!data/profiles/*
 
 *.pyc
