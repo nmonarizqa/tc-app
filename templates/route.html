@@ -39,11 +39,13 @@
 		<script type="text/javascript" src="{{ url_for('static', filename='tc.js') }}"></script>
 		<script>
 			var route = '{{ route }}'
-			var dataURL = `/routes/${route}/data`;
+			var dataURL = "http://127.0.0.1:5000/routes/Bx39/data";
 		    $.getJSON(dataURL, function(data) {
 		    	// here is where JS gets acccess to all route data, so we can call functions from other JS files here.
 	            tc.initialize(data);
+	            console.log("sdf");
 	        });
+
 	    </script>
 	</body>
 </html>
